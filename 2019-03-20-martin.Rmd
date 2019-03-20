@@ -57,6 +57,10 @@ stringInteger <- c("1","2","-11")
 class(stringInteger) 
 ```
 ```{r}
-
-```trueInteger <- as.integer(stringInteger)
-class(trueInteger) 
+birthplace <- factor(
+  c("台北市","新北市","台中市","台南市","高雄市")
+)
+class(birthplace)
+typeof(birthplace)
+levels(birthplace)
+as.integer(birthplace)
