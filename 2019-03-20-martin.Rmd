@@ -5,7 +5,58 @@ date: "3/20/2019"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+b<-"你好"
+bVector<-c("你好","How are you?")
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
 
+cat(dialogue, sep="\n")
+dialogue <- c('小明說：'明天不用上課。',
+               '小花說:'真的嗎？')
+
+cat(dialogue, sep='\n')
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+class(aLogical)
+sum(aLogical)
+
+```{r}
+#factor
+```
+
+
+```{r}
+studentMajors <- (
+  c("經濟系", "經濟系", "法律系")
+)
+```
+
+
+```{r}
+studentMajors <- factor(
+  c("經濟系", "經濟系", "法律系")
+)
+```
+```{r}
+studentMajors
+```
+
+```{r}
+as.integer(studentMajors)
+```
+
+```{r}
+class(studentMajors)
+```
+
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) 
+```
+```{r}
+
+```trueInteger <- as.integer(stringInteger)
+class(trueInteger) 
