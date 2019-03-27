@@ -75,11 +75,15 @@ typeof(LisbonDateTime)
 as.double(LisbonDateTime)
 as.double(twDateTime)
 ```
+
 ```{r}
 a <- c(1, 5, -3)
 b <- c(0.5, 12, 2)
 aL <- c(1L, 5L, -3L)
 bL <- c(-2L, -4L, 8L)
+```{r}
+
+```
 
 
 a+bL
@@ -114,3 +118,22 @@ twDateTime3 <- ymd_hms("2019-03-21 14:04:00", tz="Asia/Taipei")
 
 ```{r}
 twDateTime3 - twDateTime
+x <- 5
+y <- 7
+x2 <- c(1,5,10)
+y2 <- c(-1,5,20)
+x3 <- c("小明","小花")
+y3 <- c("小明","小華")
+
+x == y
+x <= y
+x != y
+x < y
+
+x2 == y2
+x2 >= y2
+x2 != y2
+x2 <= y2
+
+x3 == y3
+x3 != y3
