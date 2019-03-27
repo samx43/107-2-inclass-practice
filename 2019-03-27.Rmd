@@ -1,0 +1,116 @@
+---
+title: '0327'
+output: html_document
+---
+```{r}
+library(lubridate)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+library(lubridate)
+```
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+```{r}
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+```
+
+```{r}
+class(dtObject)
+```
+
+```{r}
+Sys.timezone(+2503+12130)
+```
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+```{r}
+twDateTime
+```
+```{r}
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+```
+
+```{r}
+ymd('2018-09-11')
+```
+```{r}
+ymd("1970-01-01") %>% as.integer
+ymd("1970-01-02") %>% as.integer
+ymd("2019-03-11") %>% as.integer
+```
+
+```{r}
+typeof(LisbonDateTime)
+as.double(LisbonDateTime)
+as.double(twDateTime)
+```
+```{r}
+a <- c(1, 5, -3)
+b <- c(0.5, 12, 2)
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+
+
+a+bL
+class(a+bL)
+
+aL+bL
+class(aL+bL)
+
+class(aL*bL)
+class(aL/bL)
+
+a+4
+
+b+5
+
+
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+
+
+twDateTime 
+
+twDateTime+1
+
+
+twDateTime2 <- ymd_hms("2019-03-20 14:04:00", tz="Asia/Taipei")
+
+
+twDateTime2 - twDateTime
+
+
+twDateTime3 <- ymd_hms("2019-03-21 14:04:00", tz="Asia/Taipei")
+
+```{r}
+twDateTime3 - twDateTime
