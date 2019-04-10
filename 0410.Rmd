@@ -98,10 +98,11 @@ str_c
 民國年月<-c("099/01","099/02","099/03")
 my <- str_sub(民國年月,2,3)
 my
+my <-as.numeric(my)
 mm <- str_sub(民國年月,5,6)
 mm
-y <- 99+1911
-y
+y <-as.numeric(y)
+y <-my+1911
 str_c("西元",y,"年",mm,"月")
 str_c
 ```
