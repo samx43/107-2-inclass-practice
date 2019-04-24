@@ -112,3 +112,37 @@ class(StuList)
 StuList3
 ```
 
+```{r}
+StuDF2 <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50),
+  stringsAsFactors = FALSE
+  )
+StuDF2 
+```
+
+```{r}
+StuDf3 <- data.frame(
+  stringasfactors= FALSE
+  )
+```
+
+```{r}
+LETTERS
+letters
+```
+
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+chosenLETTERS[8]
+matObj1[8]
+matObj1[3,2]
+matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]
+```
+
