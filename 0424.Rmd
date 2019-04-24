@@ -169,3 +169,7 @@ classSurvey[c(1:60),c(4,5)]
 classSurvey[c(T),c(F,F,F,T,T,F)]
 ```
 
+```{r}
+classSurvey[c("性別","本學期學分數")]
+```
+
