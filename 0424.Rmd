@@ -97,6 +97,18 @@ StuDF[[3]][[3]]
 ```
 
 ```{r}
+class(StuDF$姓名)
+as.character(StuDF$姓名)
+class(StuDF$姓名)
+```
 
+```{r}
+class(StuList)
+as.data.frame(StuList)->StuList3
+class(StuList)
+```
+
+```{r}
+StuList3
 ```
 
