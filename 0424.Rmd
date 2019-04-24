@@ -146,3 +146,8 @@ matObj1[3,2]
 matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]
 ```
 
+```{r}
+matObj1[c(1,4),c(2,3)]
+matObj1[c(T,F,F,T,F),c(F,T,T)]
+```
+
