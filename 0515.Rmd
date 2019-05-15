@@ -187,8 +187,39 @@ multiplier <- function (m,p){
   return(multi)}
 multiplier(4,3)
 ```
+```{r}
+megaplier <- function (m,p){
+  mega <- m*1000000*p
+  return(mega)}
+megaplier(4,3)
+```
 
 ```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+class(supply_fun)
+demand_fun <- function(c,d,P){
+  Qd <- c-d*P
+  return(Qd)
+}
+class(demand_fun)
+```
 
+```{r}
+supply_fun(P=1,0,1)
+demand_fun(P=1,5,1)
+```
+```{r}
+gpa_fun <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(GPA)
+}
 ```
 
