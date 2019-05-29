@@ -55,4 +55,21 @@ textbookURL <- function(){
 textbookURL()
 ```
 
+```{r}
+demand_supply_fun <- function(P,a,b,c,d){
+  Qs <- a+b*P
+  Qd <- c-d*P
+  return(
+    list(供給量=Qs,
+        需求量=Qd,
+        超額供給量=Qs-Qd)
+  )
+}
+demand_supply_fun
+```
+
+```{r}
+demand_supply_fun(2,2,3,4,5)
+```
+
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
