@@ -47,6 +47,7 @@ major
 入學年 <- str_sub(studentID,2,4)
 入學年
 ```
+
 ```{r}
 char1 <- c("月","月","月")
 char2 <- c("日","日","日")
@@ -58,14 +59,34 @@ month
 day
 str_c(month,char1,day,char2)
 ```
+
 ```{r}
 dates <- c("1-11", "5-15",  "7-17")
 str_split(dates,"-")
+```
+```{r}
+str_c(month,c("月"),day,c("日"))
+str_c(month,"月",day,"日")
+```
+
+
+```{r}
+chara <- c ("起司","火腿")
+charb <- c ("蛋餅","蛋吐司")
+taste <- c ("好好吃","好吃")
+str_c(taste,chara,charb)
 ```
 
 ```{r}
 dates
 str_replace(dates,"-","月")
+```
+
+```{r}
+dates2 <- c("3-11-2019", "4-5-2017",  "2-7-2015")
+dates2
+str_replace(dates2,"-","/")
+str_replace_all(dates2,"-","/")
 ```
 
 ```{r}
@@ -88,12 +109,23 @@ birthday
 ```
 
 ```{r}
+y <- str_sub (birthday,1,4)
+y
+m <- str_sub (birthday,5,6)
+m
+d <- str_sub (birthday,7,8)
+d
+str_c("西元",y,"年",m,"月",d,"日")
+```
+
+```{r}
 y <- str_sub(birthday,1,4)
 m <- str_sub(birthday,5,6)
 d <- str_sub(birthday,7,8)
 str_c("西元",y,"年",m,"月",d,"日")
 str_c
 ```
+
 ```{r}
 民國年月<-c("099/01","099/02","099/03")
 my <- str_sub(民國年月,2,3)
