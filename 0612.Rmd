@@ -29,10 +29,134 @@ plot(pressure)
 
 ```{r}
 sequence_source <- c("A","B","C")
+class(sequence_source)
 ```
 
 ```{r}
+load(url("https://www.dropbox.com/s/duh5aaqgl2f5m3z/loopTranscriptData.Rda?raw=1"))
+studentIds <- unique(transcriptDataFinal$學號) # 全部可能學號
+studentIds5 <- studentIds[1:5] # 前5筆學號
+```
 
+```{r}
+studentIds5
+class(studentIds5)
+```
+
+```{r}
+for(i in studentIds5){ 
+  print(i) 
+}
+```
+
+```{r}
+for(i in c(1:5)){ 
+  print(i) 
+}
+```
+
+```{r}
+for(i in c(1:5)){ 
+  print(studentIds5[[i]]) 
+}
+```
+
+```{r}
+for(i in seq_along(studentIds5)){
+  print(studentIds5[[i]])
+}
+```
+
+```{r}
+i <- 1
+print(studentIds5[[i]])
+```
+
+```{r}
+for(i in seq_along(studentIds5)){
+  print(studentIds5[[i]])
+}
+```
+
+```{r}
+gpa_fun <- function(studentID){
+  if(studentID%in%transcriptDataFinal$學號){
+   transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+   subSample <- transcriptDataFinal[logiChosenStudent,]
+
+   sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(GPA)
+   }else{
+    message("noStudentID")
+}}
+gpa_fun("92aS67fee") # 顯示82.85276
+gpa_fun("aa829838s") # 查無此學號
+```
+
+```{r}
+gmailAddress <- c(
+  "tim@gmail.com",
+  "anita",
+  "yellen@gmail.com",
+  "huang@gmail.com"
+)
+```
+
+```{r}
+# 開始設定
+gmailAddress <- c(
+  "tim@gmail.com",
+  "anita",
+  "yellen@gmail.com",
+  "huang@gmail.com"
+)
+cat("起始狀況\n")
+gmailAddress
+
+# for loop
+for(i in seq_along(gmailAddress)){
+  if(!str_detect(gmailAddress[[i]],"@gmail.com")){
+    correctGmailAddress <-
+      str_c(gmailAddress[[i]],"@gmail.com")
+    gmailAddress[[i]] <- correctGmailAddress
+  }
+}
+
+cat("修正後狀況\n")
+gmailAddress
+```
+
+```{r}
+gmailAddress
+```
+
+```{r}
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+```
+
+```{r}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]][["commit"]][["author"]][["name"]])
+}
+
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]][["commit"]][["committer"]][["name"]])
+}
+
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]][["commit"]][["committer"]][["date"]])
+}
+```
+
+```{r}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]]$commit$author$name)
+}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]]$commit$committer$name)
+}
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
